@@ -2,7 +2,7 @@
 const path = require('path');
 const hbs = require('hbs');
 const express = require('express');
-
+const port = process.env.PORT || 3000;
 const app = express();
 // to set viw engin
 app.set("view engin","hbs");
@@ -19,6 +19,6 @@ app.get('/',(req,res)=>{
 });
 
 
-const server = app.listen(3000,()=>{
-    console.log("listining the port : 8000");
+const server = app.listen(port,()=>{
+    console.log(`listining the port : ${port}`);
 })
